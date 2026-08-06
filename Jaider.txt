@@ -1,2 +1,6 @@
 hola mundo 
+<<<<<<< HEAD
 klk
+=======
+klk
+>>>>>>> c75000f15725617f03fcd6326660826d02ce87ce
