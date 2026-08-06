@@ -1,3 +1,9 @@
 hola mundo 
 <<<<<<< HEAD
+<<<<<<< HEAD
 klk
+=======
+klk
+dimelo mi loco
+>>>>>>> f619a9065785841bf7739dc2378ed16294ce0ff0
+comentala
