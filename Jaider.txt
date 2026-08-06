@@ -1,8 +1,17 @@
 hola mundo 
+<<<<<<< HEAD
+<<<<<<< HEAD
+klk
+=======
 klk
 <<<<<<< HEAD
 amor prohibido Churo Diaz
 =======
 dimelo mi loco
 >>>>>>> f619a9065785841bf7739dc2378ed16294ce0ff0
+<<<<<<< HEAD
 Churo
+=======
+comentala
+123
+>>>>>>> 41a006244fba38529104a9c8c148e50d49f92e2e
