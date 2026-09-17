@@ -1,0 +1,42 @@
+
+services:
+#aplicacion falsk
+ app:
+    build: .
+    #nombre del contenedor
+    container_name: flask_app
+    #localhost:5000 -> contenedor:5000
+    ports:
+        - "5000:5000" 
+    environment:
+        DATABASE_URL: mysql+pymysql://Jroot_user:Jroot_pass@db:3306/RIUL_db
+
+        JWT_SECRET_KEY: super-clave-secret
+
+    depends_on:
+     db :
+        condition: service_healthy
+    restart: unless-stopped
+
+ db:
+    image: mysql:8.4
+    container_name: Riul_mysql
+    environment:
+        MYSQL_DATABASE: RIUL_db
+        MYSQL_USER: Jroot_User
+        MYSQL_PASSWORD: Jroot_pass
+        MY_SQL_ROOT_PASSWORD: Jroot_pass
+    ports:
+    - "3306:3306"
+    volumes :
+        - mysql_data:/var/lib/mysql
+    restart: unless-stopped
+
+    healthcheck:
+        test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-uroot", "-proot_pass"]
+        interval: 5s
+        timeout: 5s
+        retries: 20
+
+volumes:
+    mysql_data:
